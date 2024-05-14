@@ -21,6 +21,10 @@ module.exports = {
         path: path.resolve(__dirname, 'app'),
         publicPath: './',
     },
+    output: {
+        path: path.resolve(__dirname, 'app'), 
+        filename: 'bundle.js',
+      },
     devServer: {
         historyApiFallback: true,
         static: path.join(__dirname, 'app'),
