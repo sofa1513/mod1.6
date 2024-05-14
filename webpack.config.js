@@ -107,7 +107,7 @@ module.exports = {
             },
             {
                 test: /\.svg$/,
-                type: 'asset/inline' // Обновлено правило для файлов SVG
+                type: 'asset/inline' 
             },
         ]
     },
