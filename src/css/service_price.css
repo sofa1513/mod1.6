@@ -1,0 +1,394 @@
+
+
+html{
+
+    font-family: TT Lakes Regular;
+    letter-spacing: 0.2px;
+}
+
+*, 
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.container{
+    min-width: 320px;
+    max-width: 1056px;
+   } 
+
+ .service-header{
+/* margin-top: 24px; */
+border-bottom: 1px solid;
+border-image: linear-gradient(to right, rgba(248, 248, 248, 1) 0%, rgba(255, 255, 255, 1) 100%) 1;
+}  
+
+.service-header__inner{
+border-top: 1px solid #D9FFF5;
+padding: 16px;
+background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+}
+
+.service-header__title{
+color: #7E7E82;
+text-transform: uppercase;
+font-size: 16px;
+line-height: 1.4;
+
+} 
+
+
+.service{
+  background-color: #F8F8F8;
+  min-height: 154px;
+  overflow: hidden;
+}
+
+.service__inner{
+  min-width: 630px;
+  min-height: 115px; 
+  margin-left: 24px;
+
+}
+
+.service__swiper{
+  position: relative;
+  min-width: 630px; 
+  min-height: 115px; 
+  transition-duration: 0.5s;
+  overflow-y: hidden ;
+}
+
+.service__item{
+  margin: 16px;
+  width: 200px;
+  height: 140px;
+  background-color: #FFFFFF;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 16px;
+}
+.service__item p{
+  margin-top: 16px;
+  margin-left: 16px;
+  white-space: nowrap;
+}
+
+.service__item-link{
+  cursor: pointer;
+  margin-top: 80px;
+  margin-left: -45px;
+}
+
+.service__item::after{
+  position: relative;
+  content: '';
+ 
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='1' y='1' width='38' height='38' rx='19' stroke='%23FF3E79' stroke-width='2'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z' fill='%23FF3E79'/%3e%3c/svg%3e ");
+  width: 40px;
+  height: 40px;
+  top: 75px;
+  right: 10px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #B5B6BC;
+}
+
+.swiper-pagination {
+  position: relative;
+      margin-top: 10px;
+      margin-left: -160px;
+  
+  }
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 6px);
+}
+
+ .swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 12px));
+  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 12px));
+} 
+
+.service__button-show {
+  display: none;
+}
+
+.invisible {
+  display: none;
+}
+
+.price{
+  overflow: hidden;
+}
+
+.price__inner{
+  background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+ 
+}
+
+.price__title{
+  color: #7E7E82;
+  text-transform: uppercase;
+  padding: 24px; 
+}
+.price-list__inner{
+  min-width: 750px; 
+  background-color: #F8F8F8;
+  min-height: 300px;
+  overflow: hidden;
+  
+}
+
+.price__card{
+  background-color: #fff;
+  border: none;
+  border-radius: 9px;
+  display:flex;
+  flex-wrap: wrap;
+  width: 235px;
+  height: 300px;
+   margin-left: 8px;
+   margin-top: 16px;
+   margin-right: 24px; 
+   margin-bottom: 44px;
+}
+.price__card-item{
+  min-width: 228px;
+  
+}
+.price__card-title{
+  margin-top: 16px;
+color:#7E7E82;
+font-size: 14px;
+line-height: 16px;
+text-align: left;
+
+}
+
+.price__card-info{
+  margin-top: 4px;
+font-size: 14px;
+line-height: 18px;
+letter-spacing: 0.20000000298023224px;
+text-align: left;
+
+}
+.price__card-btn{
+  margin-left: 100px;
+  margin-top: -40px;
+background-color: #FF3E79;
+border:none;
+border-radius: 25px;
+width: 119px;
+height: 32px; 
+position: absolute;
+}
+
+.price__card-btn p{
+  color:#fff;
+  font-family: TT Lakes Regular;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  margin-left: -15px;
+ 
+}
+
+.price__card-btn::after{
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 9px;
+  background-image: url('data:image/svg+xml,%3Csvg width="8" height="10" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M4.05715 4.99994L0.671893 2.27169C0.17799 1.87364 0.174734 1.12223 0.665171 0.719921L0.912566 0.516979C1.27952 0.215962 1.80752 0.214355 2.1763 0.513135L7.62225 4.92536C7.66966 4.96378 7.66966 5.0361 7.62225 5.07451L2.27541 9.40644C1.84893 9.75197 1.23832 9.75011 0.813948 9.402C0.246776 8.93674 0.25054 8.06777 0.821721 7.60744L4.05715 4.99994Z" fill="white" /%3E%3C/svg%3E');
+  display: block;
+  background-size: cover;
+  top: 47%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+} 
+.price__card-header{
+  display: none;
+}
+
+.price-info__inner{
+  margin-top: 24px;
+}
+ .price-info__text{
+  width: 288px;
+  font-size: 14px;
+  margin: 16px;
+  color: #1B1C21;
+  line-height: 20px;
+ }
+.price-info__link{
+  display: inline-block;
+  width: 230px;
+  font-size: 16px;
+  margin: 16px;
+  color: #1B1C21;
+  line-height: 24px;
+}
+.price-info__link::after{
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='28' viewBox='0 0 24 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.1625 17.6041C8.83819 17.9796 8.83819 18.536 9.1625 18.9115L9.29432 19.0641C9.69317 19.5258 10.409 19.5258 10.8078 19.0641L14.8372 14.3994C15.1615 14.0239 15.1615 13.4675 14.8372 13.092L10.8078 8.42728C10.409 7.96553 9.69317 7.96553 9.29432 8.42728L9.1625 8.57988C8.83819 8.95533 8.83819 9.5118 9.1625 9.88726L12.4954 13.7457L9.1625 17.6041Z' fill='%23FF3E79'/%3e%3c/svg%3e");
+  
+}
+
+.price-info__link:hover{
+  color:black;
+}
+ 
+ @media (min-width: 768px) {
+
+
+    .swiper-pagination {
+  display: none
+  }
+
+
+  .service__button-show {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: TT Lakes Regular;
+    border:none;
+    background-color: transparent;
+    
+    }
+    
+    .service__button-show::before {
+    content: '';
+    display: block;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg id='ic/expand'%3e%3cpath id='icon' fill-rule='evenodd' clip-rule='evenodd' d='M14.5001 7.50008L12.0001 10.0001L9.50008 7.50008C9.22393 7.22393 8.77622 7.22393 8.50008 7.50008C8.22393 7.77622 8.22393 8.22393 8.50008 8.50008L11.293 11.293C11.6835 11.6835 12.3167 11.6835 12.7072 11.293L15.5001 8.50008C15.7762 8.22393 15.7762 7.77622 15.5001 7.50008C15.2239 7.22393 14.7762 7.22393 14.5001 7.50008ZM14.5001 13.5001L12.0001 16.0001L9.50008 13.5001C9.22393 13.2239 8.77622 13.2239 8.50008 13.5001C8.22393 13.7762 8.22393 14.2239 8.50008 14.5001L11.293 17.293C11.6835 17.6835 12.3167 17.6835 12.7072 17.293L15.5001 14.5001C15.7762 14.2239 15.7762 13.7762 15.5001 13.5001C15.2239 13.2239 14.7762 13.2239 14.5001 13.5001Z' fill='%2341F6D7'/%3e%3c/g%3e%3c/svg%3e ");
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+    }
+  
+  .service__button_hiden{
+    transform: translateY(20px);
+    font-family: TT Lakes Regular;
+    margin-bottom: 44px;
+  }
+
+  .service__button_hiden::before{
+    transform: rotate(180deg);
+  }
+
+  
+  .service__list {
+    display: grid;
+    grid-template-columns: repeat(3 ,minmax(205px , 200px));
+    max-height: 100%;
+    gap: 16px;
+    transition-duration: 0.5s;
+    transition-property: height;
+    
+  }
+
+  .service__item {
+    margin: 0;
+    padding: 0;
+  }
+ 
+
+ .price__list{
+  display: grid;
+  gap: 2px; /* убираем расстояние между элементами */
+  grid-template-rows: auto;
+ }
+ 
+ .price__card-header{
+  display: grid;
+  grid-template-columns: 380px 70px 75px 70px;
+  gap: 20px;
+  column-gap: 70px;
+  grid-template-rows: auto;
+  height: 60px;
+  color: #7E7E82;
+  font-family: TT Lakes Regular;
+  font-size: 14px;
+  align-items: center;
+  
+ }
+ 
+ .price__card-header-title{
+  margin-left: 20px;
+ }
+ .price__box{
+  height: 60px;
+  width: 1056px;
+ }
+ 
+ .price__card {
+  display: grid;
+  grid-template-columns: 350px 70px 75px 70px;
+  gap: 20px;
+  column-gap: 70px;
+  grid-template-rows: auto;
+  height: 60px;
+  color: #1B1C21;
+  font-family: TT Lakes Regular;
+  font-size: 14px;
+  background-color: #fff;
+  border: none;
+  border-radius: 0;
+  min-width: 900px;
+  margin-left: 24px;
+  margin-top: 0; 
+  align-items: center;
+ }
+ 
+ .price__card-title{
+  display: none;
+ }
+ 
+ .price__card-btn{
+ margin-top: -13px;
+  margin-left: 45px;}
+
+ .price-info__text{
+  width: 430px;
+  font-size: 14px;
+  margin: 16px;
+  color: #1B1C21;
+  line-height: 20px;
+ }
+.price-info__link{
+  display: inline-block;
+  width: 400px;
+  font-size: 16px;
+  margin: 16px;
+  color: #1B1C21;
+  line-height: 24px;
+}
+  
+ }
+ 
+ @media (min-width: 1120px) {
+ .container{
+  max-width: 1056px;
+}
+.service__list{
+  grid-template-columns: repeat(4 ,minmax(224px , 240px));
+}
+ }
+
+ 

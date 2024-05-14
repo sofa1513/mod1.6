@@ -1,0 +1,206 @@
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: TT Lakes Regular;
+    letter-spacing: 0.2px;
+}
+
+
+
+
+.sidebar {
+   display: none;
+}
+
+.sidebar--open {
+     font-family: TT Lakes Medium;
+    max-width: 320px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 14px 0px 60px 0px gainsboro;
+    position: fixed; 
+    z-index: 2; 
+    top: 0; 
+    left: 0; 
+  background-color: #fff;
+ min-height: 888px;
+  height: 100vw;
+ 
+}
+   
+
+.sidebar-header__list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    list-style-type: none;
+    margin: 0;
+    padding: 24px;
+    justify-content: space-between;
+}
+
+.sidebar-main__list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 18px;
+    padding: 0;
+}
+.sidebar-header__item:nth-child(2){
+    flex-grow: 2;
+}
+.sidebar-main__item {
+    padding: 0 24px;
+    position: relative;
+}
+.sidebar-main__item:hover::before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 40px;
+    background-color:#41F6D7;
+    border-radius: 20px;
+    top: 0px;
+    left: -2px;
+}
+.sidebar-main__link {
+    text-decoration: none;
+    color: #1B1C21;
+    display: block;
+    padding: 7px 10px;
+}
+
+.sidebar__btn {
+    border: none;
+    background-color: #fff;
+ 
+  } 
+.close{
+    width: 40px;
+    height: 40px; 
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='20' fill='%23FF3E79'/%3E%3Cpath d='M13.7935 12.2571C13.403 11.8666 12.7698 11.8666 12.3793 12.2571L12.2571 12.3793C11.8666 12.7698 11.8666 13.403 12.2571 13.7935L18.4636 20L12.2571 26.2065C11.8666 26.597 11.8666 27.2302 12.2571 27.6207L12.3793 27.7429C12.7698 28.1334 13.403 28.1334 13.7935 27.7429L20 21.5364L26.2065 27.7429C26.597 28.1334 27.2302 28.1334 27.6207 27.7429L27.7429 27.6207C28.1334 27.2302 28.1334 26.597 27.7429 26.2065L21.5364 20L27.7429 13.7935C28.1334 13.403 28.1334 12.7698 27.7429 12.3793L27.6207 12.2571C27.2302 11.8666 26.597 11.8666 26.2065 12.2571L20 18.4636L13.7935 12.2571Z' fill='%23FFFFFF'/%3E%3C/svg%3E"); 
+}
+ .search{
+    width: 40px;
+    height: 40px; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40.000000' height='40.000000' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3cdesc%3e Created with Pixso. %3c/desc%3e%3cdefs/%3e%3crect id='back' rx='20.000000' width='40.000000' height='40.000000' fill='%23FF3E79' fill-opacity='1.000000'/%3e%3cpath id='icon' d='M23.5007 22.0005L22.7107 22.0005L22.4307 21.7305C23.6306 20.3306 24.2507 18.4204 23.9106 16.3906C23.4407 13.6108 21.1206 11.3906 18.3206 11.0508C14.0906 10.5308 10.5305 14.0908 11.0505 18.3208C11.3906 21.1206 13.6106 23.4404 16.3906 23.9106C18.4207 24.2505 20.3306 23.6309 21.7307 22.4307L22.0007 22.7104L22.0007 23.5005L26.2607 27.7505C26.6707 28.1606 27.3306 28.1606 27.7407 27.7505L27.7507 27.7407C28.1606 27.3306 28.1606 26.6704 27.7507 26.2607L23.5007 22.0005ZM13.0007 17.5005C13.0007 19.9907 15.0107 22.0005 17.5007 22.0005C19.9907 22.0005 22.0007 19.9907 22.0007 17.5005C22.0007 15.0107 19.9907 13.0005 17.5007 13.0005C15.0107 13.0005 13.0007 15.0107 13.0007 17.5005Z' clip-rule='evenodd' fill='%23FFFFFF' fill-opacity='1.000000' fill-rule='evenodd'/%3e%3c/svg%3e ");
+}
+
+.call{
+    width: 40px;
+    height: 40px; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg id='ic/call'%3e%3crect id='back' width='40' height='40' rx='20' fill='%23FF3E79'/%3e%3cpath id='icon' fill-rule='evenodd' clip-rule='evenodd' d='M12.7602 23.25L15.3002 22.96C15.9102 22.89 16.5102 23.1 16.9402 23.53L18.7802 25.37C21.6102 23.93 23.9302 21.62 25.3702 18.78L23.5202 16.93C23.0902 16.5 22.8802 15.9 22.9502 15.29L23.2402 12.77C23.3602 11.76 24.2102 11 25.2302 11H26.9602C28.0902 11 29.0302 11.94 28.9602 13.07C28.4302 21.61 21.6002 28.43 13.0702 28.96C11.9402 29.03 11.0002 28.09 11.0002 26.96V25.23C10.9902 24.22 11.7502 23.37 12.7602 23.25Z' fill='white'/%3e%3c/g%3e%3c/svg%3e ");
+}
+
+.chat{
+    width: 40px;
+    height: 40px; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg id='ic/chat'%3e%3crect id='back' width='40' height='40' rx='20' fill='%23FF3E79'/%3e%3cpath id='icon' fill-rule='evenodd' clip-rule='evenodd' d='M28 11H12C10.9 11 10.01 11.9 10.01 13L10 31L14 26H28C29.1 26 30 25.1 30 24V13C30 11.9 29.1 11 28 11ZM21 22H15C14.45 22 14 21.55 14 21C14 20.45 14.45 20 15 20H21C21.55 20 22 20.45 22 21C22 21.55 21.55 22 21 22ZM25 17H15C14.45 17 14 16.55 14 16C14 15.45 14.45 15 15 15H25C25.55 15 26 15.45 26 16C26 16.55 25.55 17 25 17Z' fill='white'/%3e%3cmask id='mask0_0_1880' style='mask-type:luminance' maskUnits='userSpaceOnUse' x='10' y='11' width='20' height='20'%3e%3cpath id='icon_2' fill-rule='evenodd' clip-rule='evenodd' d='M28 11H12C10.9 11 10.01 11.9 10.01 13L10 31L14 26H28C29.1 26 30 25.1 30 24V13C30 11.9 29.1 11 28 11ZM21 22H15C14.45 22 14 21.55 14 21C14 20.45 14.45 20 15 20H21C21.55 20 22 20.45 22 21C22 21.55 21.55 22 21 22ZM25 17H15C14.45 17 14 16.55 14 16C14 15.45 14.45 15 15 15H25C25.55 15 26 15.45 26 16C26 16.55 25.55 17 25 17Z' fill='white'/%3e%3c/mask%3e%3cg mask='url(%23mask0_0_1880)'%3e%3c/g%3e%3c/g%3e%3c/svg%3e ");
+
+}
+.profile{
+    width: 40px;
+    height: 40px; 
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg id='ic/profile'%3e%3crect id='back' width='40' height='40' rx='20' fill='%23FF3E79'/%3e%3cg id='Group'%3e%3cg id='Group 2'%3e%3cpath id='Oval' d='M20.5 19C22.9853 19 25 16.9853 25 14.5C25 12.0147 22.9853 10 20.5 10C18.0147 10 16 12.0147 16 14.5C16 16.9853 18.0147 19 20.5 19Z' fill='white'/%3e%3cpath id='Path' d='M10.0166 26.6118C9.88693 27.3412 10.5352 28 11.339 28H28.6604C29.4902 28 30.1125 27.3412 29.9829 26.6118C29.2309 22.4 25.0561 20 19.9997 20C14.9433 20 10.7686 22.4 10.0166 26.6118Z' fill='white'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+
+} 
+
+.sidebar-footer__container {
+    padding-left: 24px;
+    
+}
+.sidebar-footer__list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+.sidebar-footer__link {
+    text-decoration: none;
+    color: #1B1C21;
+    display: block; 
+    margin-bottom: 12px;
+}
+
+.tel {
+    font-family: TT Lakes Bold;
+    font-size: 24px;
+}
+.lang__list {
+    list-style-type: none;
+    display: flex;
+    gap: 7px;
+    padding: 0;
+    
+}
+
+.lang__list-item{
+margin-top: 40px;
+}
+.sidebar-main__link:hover,
+.lang__button:hover,
+.sidebar-footer__link:hover {
+    color: #7E7E82;
+}
+.sidebar-header__item:hover,
+.sidebar-footer__item:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.lang__button {
+    color: #1B1C21;
+    background-color: transparent;
+    border: none;
+}
+.ru {
+    color: #7E7E82;
+}
+
+@media (min-width: 1120px) {
+    .sidebar {
+        height: 100vh;
+        font-family: TT Lakes Medium;
+        max-width: 320px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 14px 0px 60px 0px gainsboro;
+        position: fixed; 
+        z-index: 2; 
+        top: 0; 
+        left: 0; 
+      background-color: #fff;
+    
+     transition: left 0.3s ease;
+      }
+    
+    
+    .sidebar-wrapper {
+      max-height: 880px;
+    }
+
+    .close{
+        display: none;
+    }
+
+}
+
+@media (min-width: 1400px){
+    .sidebar {
+       
+        position: absolute; /* изменено с fixed на absolute */
+        left:10%;
+        height: 100vh; /* изменено с 100vw на 100vh */
+    }   
+}
