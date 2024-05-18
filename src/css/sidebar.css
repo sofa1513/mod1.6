@@ -199,8 +199,8 @@ margin-top: 40px;
 @media (min-width: 1400px){
     .sidebar {
        
-        position: absolute; /* изменено с fixed на absolute */
+        position: absolute; 
         left:10%;
-        height: 100vh; /* изменено с 100vw на 100vh */
+        height: 100vh; 
     }   
 }

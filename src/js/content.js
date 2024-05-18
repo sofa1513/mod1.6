@@ -40,7 +40,7 @@ moreBtn.addEventListener('click', function() {
       }
   });
 
-  moreBtn.textContent = moreBtn.textContent === 'Читать далее' ? 'Скрыть' : 'Читать далее'; // Обновляем текст кнопки
+  moreBtn.textContent = moreBtn.textContent.includes('Читать далее') ? 'Скрыть' : 'Читать далее';// Обновляем текст кнопки
   moreBtn.classList.toggle('flipped'); // Переключаем класс для анимации
 });
 

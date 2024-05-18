@@ -1,5 +1,7 @@
 /* Модалки */
 
+const { call } = require("file-loader");
+
 
 
  // Выбираем все кнопки для открытия модального окна "call"
@@ -14,51 +16,77 @@ const popCloseBtns = document.querySelectorAll('.popup__btn-close');
 // Выбираем все модальные окна
 const popups = document.querySelectorAll('.popup');
 
+const callModal = document.querySelectorAll('.popup__call');
+
+const chatModal = document.querySelectorAll('.popup__chat');
+
 const wrapper = document.querySelector('.wrapper');
 
-// Функция для открытия модального окна
-function openModal(popup) {
-  popup.style.display = 'block'; // Показываем модальное окно
-  wrapper.classList.add('wrapper--blur');
-}
 
-// Функция для закрытия модального окна
-function closeModal() {
-  popups.forEach(popup => {
-    popup.style.display = 'none';
-    wrapper.classList.remove('wrapper--blur');
-  });
-  
-}
 
-// Добавляем обработчик клика на каждую кнопку "call"
+
+// Добавляем обработчики событий на все кнопки "call" для открытия модального окна "call"
 callBtns.forEach(btn => {
   btn.addEventListener('click', function() {
-    openModal(document.querySelector('.popup__call'));
+    callModal.forEach(modal => {
+      modal.classList.add('popup--open');
+      modal.classList.remove('popup--closed');
+       
+    });
+   
+  
   });
-});
+  
+}); 
 
-// Добавляем обработчик клика на каждую кнопку "chat"
+
+
+
+// Добавляем обработчики событий на все кнопки "chat" для открытия модального окна "chat"
 chatBtns.forEach(btn => {
   btn.addEventListener('click', function() {
-    openModal(document.querySelector('.popup__chat'));
+    chatModal.forEach(modal => {
+      modal.classList.add('popup--open');
+      modal.classList.remove('popup--closed');
+       
+    });
+   
+   
   });
+
 });
 
-// Добавляем обработчик клика на кнопку закрытия модального окна
+
+ 
+// Добавляем обработчики событий на кнопку закрытия модальных окон
 popCloseBtns.forEach(btn => {
-  btn.addEventListener('click', closeModal);
+  btn.addEventListener('click', function() {
+    callModal.forEach(modal => {
+      modal.classList.remove('popup--open');
+    });
+    chatModal.forEach(modal => {
+      modal.classList.remove('popup--open');
+    });
+   
+    popups.forEach(popup => {
+      popup.classList.add('popup--closed');
+    });
+   
+  });
 });
 
 
+wrapper.addEventListener('click', function(event) {
+  if (!event.target.closest('#call') && !event.target.closest('#chat')) {
+      callModal.forEach(modal => {
+          modal.classList.remove('popup--open');
+      });
+      chatModal.forEach(modal => {
+          modal.classList.remove('popup--open');
+      });
   
-document.addEventListener('dblclick', (event) => {
-  popups.forEach(popup => {
-    const isClickInsidePopup = popup.contains(event.target);
-    const isClickOnPopup = event.target.matches('.popup');
-
-    if (!isClickInsidePopup && !isClickOnPopup) {
-      closeModal(); 
-    }
-  });
-}); 
+      popups.forEach(popup => {
+          popup.classList.add('popup--closed');
+      });
+  }
+});

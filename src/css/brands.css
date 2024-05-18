@@ -79,6 +79,8 @@ line-height: 1.4;
   gap: 16px;
 }
 
+
+
 .brand__item-link{
   cursor: pointer;
   width: 40px;
@@ -201,7 +203,21 @@ fill:rgb(122, 24, 122)
   
  }
 
- @media (min-width: 1120px) {
+
+ @media (min-width:1120px ) and (max-width:1380px) {
+  .brands__list{
+  grid-template-columns: repeat(4, minmax(60px, 170px));
+  }
+
+  .brand__item{
+    width: 180px;
+  height: 72px;
+  }
+  .brand__item-link::after{
+  margin-left: -10px;
+  }
+}
+ @media (min-width: 1380px) {
  .container{
   max-width: 1056px;
 }
@@ -209,3 +225,10 @@ fill:rgb(122, 24, 122)
   grid-template-columns: repeat(4 ,minmax(224px , 240px));
 }
  }
+
+ @media (min-width: 1500px) {
+ 
+ .brands__list{
+   grid-template-columns: repeat(4 ,minmax(224px , 300px));
+ }
+  }

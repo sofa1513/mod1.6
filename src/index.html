@@ -9,6 +9,66 @@
 	</head>
   
 	<body>
+      <!--       МОДАЛЬНЫЕ ОКНА       -->
+
+      <!--            ЗВОНОК        --> 
+     
+         <div class="popup popup--closed popup__call">
+          <div class="popup__container">
+            <button class="popup__btn-close">
+            </button>
+            <div class="popup__title">
+              <h2>Заказать звонок</h2>
+            </div>
+            <form class="popup__form"  id="call-form" action="">
+              <input type="tel" class="popup__input" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+    title="Введите телефон в формате: XXX-XXX-XXXX"
+    required>
+            </form>
+            <div class="popup__info">
+             <p> Нажимая “отправить”, вы даете согласие на
+              <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+              <a href="#">политикой конфиденциальности</a></p>
+            </div>
+            <button class="popup__send-btn" form="call-form" type="submit" >
+              <p>отправить</p>
+           </button>
+          </div>
+        </div> 
+      
+  
+       <!--      ОТЗЫВЫ         --> 
+         <div class="popup popup--closed popup__chat">
+          <div class="popup__container">
+            <button class="popup__btn-close">
+            </button>
+            <div class="popup__title"> 
+              <h2>Обратная связь </h2>
+            </div>
+            <form class="popup__form"  id='chat-form' action="#">
+              <input type="text" placeholder="Имя" class="popup__input" maxlength="10">
+              <input type="tel" class="popup__input" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              title="Введите телефон в формате: XXX-XXX-XXXX"
+              required>
+              <input  type="email"
+              class="popup__input"
+              placeholder="Электронная почта"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Введите адрес электронной почты в формате example@mail.com"
+              required>
+              <textarea class="popup__input text" placeholder="Сообщение" name="text" id="" cols="30" rows="10"></textarea>
+            </form>
+            <div class="popup__info">
+             <p> Нажимая “отправить”, вы даете согласие на
+              <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+              <a href="#">политикой конфиденциальности</a></p>
+            </div>
+            <button class="popup__send-btn" form="chat-form">
+              <p>отправить</p>
+           </button>
+          </div>
+  </div> 
+
    <div class="page-box">
 
   
@@ -28,10 +88,10 @@
                 </a>
               </li>
               <li class="header__list-item">
-                <button class="header__list-btn call" data-popup="popup__call"></button>
+                <button class="header__list-btn call" id="call"></button>
               </li>
               <li class="header__list-item">
-                <button class="header__list-btn chat" data-popup="popup__chat" > </button>
+                <button class="header__list-btn chat" id="chat" > </button>
               </li>
               <li class="header__list-item">
                 <button class="header__list-btn profile line"> </button>
@@ -106,7 +166,7 @@
                     Qui sed fugiat, harum incidunt veniam non.
                   </p>
                   <button class="content__more-btn" data-state="hidden"><span>Читать далее</span></button>
-                <!-- <button class="content__more-btn"><span>Читать далее</span></button> -->
+              
               </div>
               <div class="content__img">
                 <img src="./img/CPS.jpg" alt="CPS">
@@ -134,7 +194,7 @@
       <section class="brands">
       <div class="brands__inner">
     
-        <div class="swiper mySwiper0">
+        <div class="swiper mySwiper">
             <div class="swiper-wrapper brands__list">
               <div class="swiper-slide"><div class="brand__item">
                 <img class="brand__item-img" src="./img/brand1.png" alt="Lenovo" >
@@ -237,7 +297,7 @@
   <section class="service">
   <div class="service__inner">
 
-    <div class="swiper mySwiper1">
+    <div class="swiper mySwiperServ">
         <div class="swiper-wrapper service__list">
           <div class="swiper-slide"><div class="service__item">
             <p>Ремонт ноутбуков</p> 
@@ -332,7 +392,7 @@
       </div>
     
  <div class="price-list__inner">
-  <div class="swiper mySwiper2">
+  <div class="swiper mySwiperPr">
     <div class="swiper-wrapper price__list">
       <div class="price__card-header">
         <div class="price__card-header-title">Ремонтные услуги</div>
@@ -502,67 +562,11 @@
   </div>
  </div>
     </div>
-  
-    <!--       МОДАЛЬНЫЕ ОКНА       -->
 
-      <!--            ЗВОНОК        --> 
-      <div class="modal__contain">
-        <div class="popup popup__call">
-          <div class="popup__container">
-            <button class="popup__btn-close">
-            </button>
-            <div class="popup__title">
-              <h2>Заказать звонок</h2>
-            </div>
-            <form class="popup__form" action="">
-              <input type="tel" class="popup__input" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-    title="Введите телефон в формате: XXX-XXX-XXXX"
-    required>
-            </form>
-            <div class="popup__info">
-             <p> Нажимая “отправить”, вы даете согласие на
-              <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-              <a href="#">политикой конфиденциальности</a></p>
-            </div>
-            <button class="popup__send-btn">
-              <p>отправить</p>
-           </button>
-          </div>
-        </div> 
-      
-  
-       <!--      ОТЗЫВЫ         --> 
-        <div class="popup popup__chat">
-          <div class="popup__container">
-            <button class="popup__btn-close">
-            </button>
-            <div class="popup__title"> 
-              <h2>Обратная связь </h2>
-            </div>
-            <form class="popup__form" action="#">
-              <input type="name" placeholder="Имя" class="popup__input">
-              <input type="tel" class="popup__input" placeholder="Телефон" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              title="Введите телефон в формате: XXX-XXX-XXXX"
-              required>
-              <input  type="email"
-              class="popup__input"
-              placeholder="Электронная почта"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-              title="Введите адрес электронной почты в формате example@mail.com"
-              required>
-              <textarea class="popup__input text" placeholder="Сообщение" name="text" id="" cols="30" rows="10"></textarea>
-            </form>
-            <div class="popup__info">
-             <p> Нажимая “отправить”, вы даете согласие на
-              <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
-              <a href="#">политикой конфиденциальности</a></p>
-            </div>
-            <button class="popup__send-btn">
-              <p>отправить</p>
-           </button>
-          </div>
-  </div> 
 
+    </div>
+  
+  
        <!--САЙДБАР-->
     <div class="sidebar ">
       <div class="sidebar-wrapper">

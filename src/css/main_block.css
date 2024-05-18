@@ -33,7 +33,7 @@ html {
     position: relative; 
     z-index: 1;
     min-width: 320px;
-    max-width: 1120px;
+    max-width: 1140px;
     background-color: #F8F8F8;
     top:0;
     transition: filter 0.3s ease;
@@ -279,6 +279,8 @@ overflow: auto;
 .title__button {
     display: block;
     width: 325px;
+    margin-right: 25px;
+    
 }
 .title__h1 {
     margin-bottom: 10px;
@@ -388,10 +390,15 @@ line-height: 20px;
 }
 
 
-@media (min-width: 1440px){
+@media (min-width: 1400px) {
+
+  .nav__list {
+    width: 70vw;
+  }
 
   .page-box{
     width: 80%; 
     margin: 0 auto; 
 }
 }
+

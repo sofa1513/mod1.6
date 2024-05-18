@@ -1,15 +1,11 @@
- // import Swiper bundle with all modules installed
- import Swiper from 'swiper/bundle';
-
- // import styles bundle
- import 'swiper/css/bundle';
+import Swiper from "swiper";
 
 let swiperB; // Переменная для хранения экземпляра первого Swiper
 let swiperS; // Переменная для хранения экземпляра второго Swiper
 
 // Функция инициализации первого Swiper
 function initSwiperB() {
-    swiperB = new Swiper(".mySwiper1", {
+    swiperB = new Swiper(".mySwiperServ", {
         slidesPerView: 3,
         spaceBetween: 30,
         freeMode: true,
@@ -22,7 +18,7 @@ function initSwiperB() {
 
 // Функция инициализации второго Swiper
 function initSwiperS() {
-    swiperS = new Swiper(".mySwiper2", {
+    swiperS = new Swiper(".mySwiperPr", {
         slidesPerView: 3,
         spaceBetween: 30,
         freeMode: true,
@@ -66,8 +62,9 @@ window.addEventListener('resize', handleResize);
 
 let serviceItem = document.querySelectorAll('.service__item');
 let serviceButtonShow = document.querySelector('.service__button-show');
+const spanElementServ = serviceButtonShow.querySelector('span');
 
-// Initial hiding of elements based on window width
+
 if (window.innerWidth > 1119) {
   for (let i = 4; i < serviceItem.length; i++) {
     serviceItem[i].classList.add('invisible');
@@ -78,16 +75,24 @@ if (window.innerWidth > 1119) {
   }
 }
 
-serviceButtonShow.addEventListener('click', function () {
+ serviceButtonShow.addEventListener('click', function () {
   serviceButtonShow.classList.toggle('service__button_hiden');
   
   if (window.innerWidth > 1119) {
     for (let i = 4; i < serviceItem.length; i++) {
+      
       serviceItem[i].classList.toggle('invisible');
     }
   } else if (window.innerWidth > 767) {
     for (let i = 3; i < serviceItem.length; i++) {
+     
       serviceItem[i].classList.toggle('invisible');
     }
   }
-});
+if (serviceButtonShow.classList.contains('service__button_hiden')) {
+  spanElementServ.textContent = 'Скрыть';
+} else {
+  spanElementServ.textContent = 'Показать все';
+}
+}); 
+

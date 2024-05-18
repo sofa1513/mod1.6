@@ -53,7 +53,12 @@ module.exports = {
             ]
         }),
     ],
-
+    resolve: {
+        fallback: {
+          "crypto": false,
+          "path": false,
+        }
+      },
     module: {
         rules: [
           

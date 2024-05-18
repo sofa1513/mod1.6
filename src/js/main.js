@@ -1,4 +1,6 @@
 
+// import Swiper styles
+import 'swiper/css';
 
 
     function importFonts(r) {
@@ -43,7 +45,7 @@ const fonts = importFonts(require.context('../fonts', false, /\.(woff|woff2|eot|
 export default fonts;
   
 
-
+ 
 
 
 
@@ -54,3 +56,6 @@ export default fonts;
   import './service';
 
 import '../css/style.css';
+
+
+
